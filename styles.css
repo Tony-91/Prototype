@@ -1,0 +1,394 @@
+/* General Page Layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+/* Sidebar (Marissa's feedback) */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 180px;
+    background: #004c66;
+    height: 100%;
+    padding: 20px;
+    color: white;
+}
+
+.sidebar a {
+    display: block;
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    margin-left: 200px;
+    padding: 40px;
+    background: linear-gradient(to right, #0077aa, #00bbdd);
+    color: white;
+    text-align: center;
+}
+
+.cta-btn {
+    background: yellow;
+    padding: 15px 25px;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    border-radius: 8px;
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Sections */
+.section {
+    margin: 30px 0 30px 200px;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* About Section */
+#about {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-left: 5px solid #3498db;
+}
+
+#about h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+#about h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    border-radius: 2px;
+}
+
+#about p {
+    color: #4a5568;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Info Section */
+#info {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+    border-left: 5px solid #2ecc71;
+}
+
+#info h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#info h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100px;
+    height: 4px;
+    background: #2ecc71;
+    border-radius: 2px;
+}
+
+.info-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-list li {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #3498db;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-list li::before {
+    content: '•';
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1;
+    margin-right: 12px;
+    margin-top: -2px;
+}
+
+.info-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .info-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .info-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Image Placeholders */
+.image-row {
+    display: flex;
+    gap: 20px;
+}
+
+.img-placeholder {
+    width: 30%;
+    height: 150px;
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* Gallery Styles */
+.gallery {
+    background: #f8f9fa;
+}
+
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-caption {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    color: #2c3e50;
+    background: white;
+}
+
+/* Footer Styles */
+.site-footer {
+    background: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.site-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-footer p {
+    margin: 10px 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.site-footer .attribution {
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+.site-footer a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #5dade2;
+    text-decoration: underline;
+}
+
+/* Info List */
+.info-list {
+    list-style: square;
+    padding-left: 20px;
+}
+
+/* Learn More Page */
+.sub-header {
+    text-align: center;
+    padding: 20px;
+    background: #0088cc;
+    color: white;
+}
+
+.back-btn {
+    display: block;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* Section Headings */
+.container > h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin: 1.5rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+    text-align: center;
+}
+
+/* Section Images */
+.section-img {
+    width: 90%;
+    max-width: 500px;
+    height: 200px;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Collapsible Cards */
+.collapse-card {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+.collapse-toggle {
+    width: 100%;
+    background: #006699;
+    color: white;
+    padding: 15px;
+    border: none;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Collapsible Content */
+.collapse-content {
+    padding: 25px;
+    display: none;
+    background: #fff;
+    line-height: 1.7;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    border-radius: 0 0 8px 8px;
+}
+
+.collapse-content p {
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+/* Style the first paragraph differently for emphasis */
+.collapse-content p:first-of-type {
+    font-size: 1.1rem;
+    color: #2d3748;
+    position: relative;
+    padding-left: 1.2rem;
+    border-left: 3px solid #3498db;
+}
+
+/* Style the toggle button text */
+.collapse-toggle {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+/* Add hover effects */
+.collapse-content:hover {
+    background: #f8fafc;
+}
+
+/* Active state styling */
+.collapse-card.active .collapse-content {
+    border-top: 1px solid #e2e8f0;
+    display: block;
+}
+
+.collapse-toggle:hover {
+    background-color: #005580;
+}
+
+/* Scroll reveal effect */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
